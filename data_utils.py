@@ -60,7 +60,7 @@ class TextMelLoader(torch.utils.data.Dataset):
     def __getitem__(self, index):
         try:
             return self.get_mel_text_pair(self.audiopaths_and_text[index])
-        else:
+        except:
             print ('Error at ', self.audiopaths_and_text[index])
             pass
 
