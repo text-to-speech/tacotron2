@@ -58,7 +58,11 @@ class TextMelLoader(torch.utils.data.Dataset):
         return text_norm
 
     def __getitem__(self, index):
-        return self.get_mel_text_pair(self.audiopaths_and_text[index])
+        try:
+            return self.get_mel_text_pair(self.audiopaths_and_text[index])
+        else:
+            print ('Error at ', self.audiopaths_and_text[index])
+            pass
 
     def __len__(self):
         return len(self.audiopaths_and_text)
