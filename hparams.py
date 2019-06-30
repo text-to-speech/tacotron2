@@ -25,8 +25,9 @@ def create_hparams(hparams_string=None, verbose=False):
         # Data Parameters             #
         ################################
         load_mel_from_disk=False,
-        training_files='/content/gdrive/My Drive/Research/data/train_split.txt',
-        validation_files='/content/gdrive/My Drive/Research/data/val_split.txt',
+        mel_path = '/content/gdrive/My Drive/Research/data/',
+        training_files='train.txt',
+        validation_files='val.txt',
         text_cleaners=['english_cleaners'],
 
         ################################
